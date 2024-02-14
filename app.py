@@ -52,10 +52,16 @@ x1 = np.random.randn(200) - 2
 x2 = np.random.randn(200)
 x3 = np.random.randn(200) + 2
 
-# Group data together
-hist_data = [x1, x2, x3]
+# radio widget to take inputs from mulitple options
+genre = st.radio(
+    "What's your favorite movie genre",
+    ('Comedy', 'Drama', 'Documentary'))
 
-group_labels = ['Group 1', 'Group 2', 'Group 3']
+if genre == 'Comedy':
+    st.write('You selected comedy.')
+else:
+    st.write("You didn't select comedy.")
+
 
 
 # Usage of multiselect widget
