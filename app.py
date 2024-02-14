@@ -1,5 +1,4 @@
 import streamlit as st
-import matplotlib.plotly.figure_factory as ff
 import pandas as pd
 import numpy as np
 
@@ -58,25 +57,8 @@ hist_data = [x1, x2, x3]
 
 group_labels = ['Group 1', 'Group 2', 'Group 3']
 
-# Create distplot with custom bin_size
-fig = ff.create_distplot(
-        hist_data, group_labels, bin_size=[.1, .25, .5])
-
-# Plot!
-st.plotly_chart(fig, use_container_width=True)
-
-# radio widget to take inputs from mulitple options
-genre = st.radio(
-    "What's your favorite movie genre",
-    ('Comedy', 'Drama', 'Documentary'))
-
-if genre == 'Comedy':
-    st.write('You selected comedy.')
-else:
-    st.write("You didn't select comedy.")
 
 # Usage of multiselect widget
-import streamlit as st
 
 options = st.multiselect(
     'What are your favorite colors',
